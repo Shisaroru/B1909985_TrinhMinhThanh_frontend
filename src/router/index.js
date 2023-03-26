@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import ContactBook from "@/views/ContactBook.vue";
 import ContactEdit from "@/views/ContactEdit.vue";
+import ContactAdd from "@/views/ContactAdd.vue";
 
 const routes = [
     {
@@ -15,12 +16,18 @@ const routes = [
         component: ContactEdit,
         props: true, // Truyền các biến trong $route.params vào làm props
     },
+
+    {
+        path: "/contacts",
+        name: "contact.add",
+        component: ContactAdd,
+    },
     
-    // {
-    //     path: "/:pathMatch(.*)*",
-    //     name: "notfound",
-    //     component: () => import("@/views/NotFound.vue"),
-    // },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "notfound",
+        component: () => import("@/views/NotFound.vue"),
+    },
 ]
 
 const router = createRouter({

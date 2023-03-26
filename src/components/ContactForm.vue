@@ -20,16 +20,6 @@
             <Field name="phone" class="form-control" type="tel" v-model="contactLocal.phone"/>
             <ErrorMessage name="phone" class="error-feedback"/>
         </div>
-        <div class="form-group">
-            <label for="address">Địa chỉ</label>
-            <Field name="address" class="form-control" type="text" v-model="contactLocal.address"/>
-            <ErrorMessage name="address" class="error-feedback"/>
-        </div>
-        <div class="form-group">
-            <label for="phone">Điện thoại</label>
-            <Field name="phone" class="form-control" type="tel" v-model="contactLocal.phone"/>
-            <ErrorMessage name="phone" class="error-feedback"/>
-        </div>
         <div class="form-group form-check">
             <input type="checkbox" name="favorite" v-model="contactLocal.favorite" class="form-check-input"/>
             <label for="favorite" class="form-check-label">
